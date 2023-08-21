@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import Intro from '@/components/Intro';
+import RecomendedMovies from '@/components/Movies/RecomendedMovies';
 import { ScrollProvider } from '@/components/Providers/ScrollProvider';
 import RecentPosts from '@/components/RecentPosts';
 import SectionContainer from '@/components/SectionContainer';
@@ -24,6 +25,7 @@ export default function Page() {
           <TopTracks />
         </Suspense>
       </SectionContainer>
+      <RecomendedMovies />
     </ScrollProvider>
   );
 }

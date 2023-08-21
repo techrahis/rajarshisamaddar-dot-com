@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/"
+    },
+    {
+      "source": "/rss",
+      "destination": "/feed.xml"
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/resume",
+      "destination": "/static/resume/Rajarshi_Samaddar_Resume.pdf"
+    }
+  ]
+}

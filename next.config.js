@@ -13,4 +13,20 @@ module.exports = withContentlayer({
     appDir: true,
   },
   swcMinify: true,
+  images: {
+    domains: [
+      'ucarecdn.com',
+      'cdn.buymeacoffee.com',
+      'res.cloudinary.com',
+      'imgur.com',
+      'i.imgur.com',
+      'cutt.ly',
+      'activity-graph.herokuapp.com',
+      'i.scdn.co', // images from spotify
+      'images.unsplash.com',
+      'm.media-amazon.com', // for imdb images
+      'cdn.sanity.io', // sanity images
+      'www.themoviedb.org',
+    ],
+  },
 });
