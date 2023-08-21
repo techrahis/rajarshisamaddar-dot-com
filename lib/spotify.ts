@@ -21,6 +21,7 @@ const getAccessToken = async () => {
     next: {
       revalidate: 3600,
     },
+    cache: 'no-store',
   });
 
   return response.json();
@@ -34,8 +35,9 @@ export const getNowPlaying = async () => {
       Authorization: `Bearer ${access_token}`,
     },
     next: {
-      revalidate: 30,
+      revalidate: 2,
     },
+    cache: 'no-store',
   });
 };
 

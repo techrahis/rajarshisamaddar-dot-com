@@ -26,6 +26,7 @@ export default function AuthorLayout({ children, content }: Props) {
             width={130}
             src={avatar || ''}
             className="rounded-full object-scale-down"
+            loading="lazy"
           />
         </div>
       </div>

@@ -18,6 +18,7 @@ export default function MovieCard({ movie }: { movie: MovieType }) {
             style={{
               height: '100%',
             }}
+            loading="lazy"
           />
         </div>
 

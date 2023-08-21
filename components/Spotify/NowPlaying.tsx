@@ -1,6 +1,7 @@
 import { getNowPlaying } from '@/lib/spotify';
 import AnimatedBars from './AnimatedBars';
 import { Artist, NowPlayingSong } from './types';
+import Link from 'next/link';
 
 async function fetchNowPlaying(): Promise<NowPlayingSong | null> {
   try {
@@ -60,14 +61,14 @@ export default async function NowPlaying() {
     <div className="mt-4 flex items-center justify-center space-x-2 sm:flex-row sm:justify-start sm:space-x-2">
       <AnimatedBars />
       <div className="inline-flex max-w-[70%] items-center space-x-2 text-sm sm:max-w-[90%] sm:text-base">
-        <a
+        <Link
           className="inline-block truncate font-medium text-gray-800 dark:text-gray-200"
           href={nowPlaying.songUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
           {nowPlaying.title}
-        </a>
+        </Link>
         <span className="mx-2 text-gray-500 dark:text-gray-300">{' – '}</span>
         <p className="inline-block truncate text-gray-500 dark:text-gray-300">
           {nowPlaying.artist}
