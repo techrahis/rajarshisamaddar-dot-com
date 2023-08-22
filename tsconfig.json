@@ -37,6 +37,6 @@
     "**/**/*.tsx|ts",
     ".contentlayer/generated",
     ".next/types/**/*.ts"
-  ],
+, "components/Spotify/NowPlaying.tsx"  ],
   "exclude": ["node_modules"]
 }

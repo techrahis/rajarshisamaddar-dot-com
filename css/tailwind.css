@@ -96,3 +96,25 @@ input:-webkit-autofill:focus {
 [cmdk-empty] {
   @apply flex items-center justify-center py-4 text-sm text-gray-500;
 }
+
+.movieScroll {
+  /* height */
+  ::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: inherit;
+  }
+
+  /* Handle for dark mode */
+  .dark::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+  }
+
+  /* Handle for light mode */
+  ::-webkit-scrollbar-thumb {
+    background: #6b7280;
+  }
+}
