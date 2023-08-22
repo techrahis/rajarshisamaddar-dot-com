@@ -1,17 +1,44 @@
-'use client';
-
 import Link from 'next/link';
-import useSWR from 'swr';
 import { SiSpotify } from 'react-icons/si';
 import Image from 'next/image';
+import { Artist, NowPlayingSong } from './types';
+import { getNowPlaying } from '@/lib/spotify';
 
-async function fetcher(url: string) {
-  return fetch(url).then((r) => r.json());
+async function fetchNowPlaying(): Promise<NowPlayingSong | null> {
+  try {
+    const response = await getNowPlaying();
+
+    if (response.status === 204 || response.status > 400) {
+      return null;
+    }
+
+    const song = await response.json();
+    const isPlaying = song.is_playing;
+    const title = song.item.name;
+    const artist = song.item.artists.map((artist: Artist) => artist.name).join(', ');
+    const album = song.item.album.name;
+    const albumImageUrl = song.item.album.images[0].url;
+    const songUrl = song.item.external_urls.spotify;
+
+    return {
+      album,
+      albumImageUrl,
+      artist,
+      isPlaying,
+      songUrl,
+      title,
+    };
+  } catch (e) {
+    if (e instanceof Error) {
+      console.error(e.message);
+    }
+  }
+
+  return null;
 }
 
-// eslint-disable-next-line @next/next/no-async-client-component
 export default async function NowPlaying() {
-  const { data: nowPlaying } = useSWR('/api/spotify', fetcher);
+  const nowPlaying = await fetchNowPlaying();
 
   if (!nowPlaying?.isPlaying) {
     return (

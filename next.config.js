@@ -9,6 +9,10 @@ module.exports = withContentlayer({
   eslint: {
     dirs: ['app', 'components', 'lib', 'layouts', 'scripts'],
   },
+  // typescript: {
+  //   // !! WARN !!
+  //   ignoreBuildErrors: true,
+  // },
   experimental: {
     appDir: true,
   },
