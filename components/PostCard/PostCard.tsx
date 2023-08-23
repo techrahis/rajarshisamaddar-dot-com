@@ -17,13 +17,13 @@ export default function PostCard({ posts, showTags = true }: PostCardProps) {
       {posts.map(({ slug, title, tags, summary }, index) => (
         <motion.li
           key={slug}
-          className="py-2"
+          className="py-0"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: index / 10 }}
         >
           <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`} legacyBehavior>
-            <article className="cursor-pointer gap-3 space-y-2 bg-opacity-20 py-5 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+            <article className="mt-4 cursor-pointer gap-3 space-y-2 bg-opacity-20 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
               <div className="space-y-3 xl:col-span-4">
                 <span className="text-2xl font-bold leading-8 tracking-tight">
                   <Link href={`/blog/${slug}`}>

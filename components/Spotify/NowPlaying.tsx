@@ -58,7 +58,7 @@ export default async function NowPlaying() {
       <h4 className="text-lg font-semibold dark:text-gray-300">Now Playing</h4>
       <Link
         href={nowPlaying.songUrl}
-        className="flex items-center justify-between rounded-sm border border-gray-200 p-3 shadow-lg dark:border-gray-800 dark:bg-zinc-800 sm:p-4"
+        className="flex items-center justify-between rounded-sm bg-gray-200 p-3 shadow-md dark:bg-zinc-800 sm:p-4"
       >
         <div className="flex items-center gap-2 ">
           <div className="h-10 w-10">

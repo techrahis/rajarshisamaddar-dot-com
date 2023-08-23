@@ -26,7 +26,8 @@ module.exports = {
         '8.5xl': '7rem',
       },
       fontFamily: {
-        sans: ['Mukta', ...defaultTheme.fontFamily.sans],
+        // sans: ['Barlow', ...defaultTheme.fontFamily.sans],
+        sans: ['Raleway', ...defaultTheme.fontFamily.sans],
       },
       gradientColorStops: {
         'gradient-1-start': '#F20089',
@@ -109,7 +110,7 @@ module.exports = {
               code: { color: theme('colors.primary.400') },
             },
             h1: {
-              fontWeight: '700',
+              fontWeight: '400',
               letterSpacing: theme('letterSpacing.tight'),
               color: theme('colors.gray.900'),
             },

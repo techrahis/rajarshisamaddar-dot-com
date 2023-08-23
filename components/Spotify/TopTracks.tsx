@@ -7,10 +7,11 @@ async function fetchTopTracks(): Promise<Song[] | null> {
     const response = await getTopTracks();
     const { items } = await response.json();
 
-    const tracks = items.slice(0, 5).map((track: TrackInfo) => ({
+    const tracks = items.slice(0, 10).map((track: TrackInfo) => ({
       artist: track.artists.map((_artist) => _artist.name).join(', '),
       songUrl: track.external_urls.spotify,
       title: track.name,
+      albumArt: track.album.images[0].url,
     }));
 
     return tracks;
@@ -31,8 +32,8 @@ export default async function TopTracks() {
   }
 
   return (
-    <div className="py-7">
-      <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+    <div className="pt-10">
+      <h1 className="mb-10 text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
         My <span className="text-green-700 dark:text-green-500">Spotify</span> Top Songs
       </h1>
       {topTracks.map((track, index) => (

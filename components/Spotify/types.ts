@@ -5,12 +5,24 @@ export type Artist = {
   href: string;
 };
 
-export type TrackInfo = { artists: Artist[]; external_urls: { spotify: string }; name: string };
+export type TrackInfo = {
+  artists: Artist[];
+  external_urls: { spotify: string };
+  name: string;
+  album: {
+    images: [
+      {
+        url: string;
+      }
+    ];
+  };
+};
 
 export type Song = {
   songUrl: string;
   artist: string;
   title: string;
+  albumArt: string;
 };
 
 export type TopTracks = {
