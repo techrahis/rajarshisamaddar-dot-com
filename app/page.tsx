@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import Intro from '@/components/Intro';
 import RecomendedMovies from '@/components/Movies/RecomendedMovies';
+import Skills from '@/components/Skills/Skills';
 import { ScrollProvider } from '@/components/Providers/ScrollProvider';
 import RecentPosts from '@/components/RecentPosts';
 import SectionContainer from '@/components/SectionContainer';
@@ -19,6 +20,7 @@ export default function Page() {
       <Hero />
       <Intro />
       <Works />
+      <Skills />
       <SectionContainer>
         <RecentPosts posts={posts} />
         <Suspense fallback="loading..">

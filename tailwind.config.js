@@ -3,7 +3,13 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
-  content: ['./pages/**/*.tsx', './components/**/*.tsx', './layouts/**/*.tsx', './lib/**/*.ts'],
+  content: [
+    './pages/**/*.tsx',
+    './components/**/*.tsx',
+    './layouts/**/*.tsx',
+    './lib/**/*.ts',
+    './app/**/*.ts',
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -28,6 +34,7 @@ module.exports = {
       fontFamily: {
         // sans: ['Barlow', ...defaultTheme.fontFamily.sans],
         sans: ['Raleway', ...defaultTheme.fontFamily.sans],
+        sarina: ['Sarina', 'cursive'],
       },
       gradientColorStops: {
         'gradient-1-start': '#F20089',

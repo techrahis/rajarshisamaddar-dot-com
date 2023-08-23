@@ -9,7 +9,7 @@ interface TrackProps {
 
 export default function Track({ track, ranking }: TrackProps) {
   return (
-    <Link href={track.songUrl}>
+    <Link href={track.songUrl} target="_blank">
       <div className="flex w-full max-w-5xl flex-row border border-gray-200 p-4 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:bg-zinc-800">
         <div className="flex flex-col items-center">
           <div className="h-10">
@@ -29,14 +29,12 @@ export default function Track({ track, ranking }: TrackProps) {
           </div>
         </div>
         <div className="flex flex-col items-baseline pl-3">
-          <a
+          <p
             className="w-60 truncate font-semibold text-gray-900 dark:text-gray-100 sm:w-96 md:w-full"
-            href={track.songUrl}
-            target="_blank"
             rel="noopener noreferrer"
           >
             {track.title}
-          </a>
+          </p>
           <p className="w-60 truncate text-gray-500 dark:text-gray-400 sm:w-96 md:w-full">
             {track.artist}
           </p>

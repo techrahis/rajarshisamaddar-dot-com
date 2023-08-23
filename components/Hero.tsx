@@ -6,6 +6,7 @@ import { ReactElement, useContext, useEffect, useRef } from 'react';
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 import { ScrollContext } from './Providers/ScrollProvider';
 import { renderCanvas } from './renderCanvas';
+import { FiDownload } from 'react-icons/fi';
 
 export default function Hero(): ReactElement {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -37,18 +38,25 @@ export default function Hero(): ReactElement {
       >
         <div className="mx-auto w-screen max-w-3xl px-4 sm:px-9 xl:max-w-5xl xl:px-0">
           <div className="-mt-36">
-            <div ref={ref} className="flex cursor-default flex-col space-y-2">
-              <h1 className="text-5xl font-semibold sm:text-7xl md:text-7xl xl:text-8xl">
-                Rajarshi Samaddar
-              </h1>
-              <h2 className="text-3xl font-medium opacity-80 sm:text-6xl md:text-5xl xl:text-6xl">
-                I build things for the web.
-              </h2>
+            <div
+              ref={ref}
+              className="flex cursor-default flex-col items-center justify-center space-y-14 text-center"
+            >
+              <div>
+                <h1 className="font-sarina text-5xl font-bold lg:text-6xl">Rajarshi Samaddar</h1>
+                <p className="mt-2 font-medium">Full-Stack Software Developer & Technical Writer</p>
+                <p className="mt-3 font-medium">
+                  I am currently building things for the web while pursuing my Bachelor Degree in
+                  Computer Science. I can code in Python, Java, JavaScript, etc.
+                </p>
+              </div>
+
               <Link
-                href="/about"
-                className="underline-magical text-md w-max cursor-pointer sm:text-lg md:text-xl xl:text-2xl"
+                href="/resume"
+                className="mt-9 flex max-w-xs select-none items-center justify-center gap-2 rounded-md border border-gray-500 px-5 py-2 outline-none transition-transform  active:scale-95 dark:border-gray-400 "
               >
-                Read more about me &rarr;
+                <FiDownload />
+                <p>Resume</p>
               </Link>
             </div>
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 transform md:bottom-8">

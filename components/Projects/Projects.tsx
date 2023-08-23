@@ -9,7 +9,7 @@ export default function Projects() {
     <>
       {projects.map((project, index) => (
         <motion.div
-          className="mx-auto grid grid-cols-1 gap-4 md:ml-[20%] xl:ml-[24%]"
+          className="mx-auto mb-6 grid grid-cols-1 gap-8 md:ml-[20%] xl:ml-[24%]"
           key={project.title}
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
