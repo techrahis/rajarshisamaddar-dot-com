@@ -15,13 +15,7 @@ export default function Projects() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: index / 10 }}
         >
-          <ProjectItem
-            index={index}
-            title={project.title}
-            url={project.url}
-            role={project.role}
-            image={project.src}
-          />
+          <ProjectItem data={project} />
         </motion.div>
       ))}
     </>

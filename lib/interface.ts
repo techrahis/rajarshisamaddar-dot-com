@@ -1,21 +1,3 @@
-export const nowPlayingEmptyState: NowPlayingSong = {
-  album: '',
-  albumImageUrl: '',
-  artist: '',
-  isPlaying: false,
-  songUrl: '',
-  title: '',
-};
-
-export type NowPlayingSong = {
-  album: string;
-  albumImageUrl: string;
-  artist: string;
-  isPlaying: boolean;
-  songUrl: string;
-  title: string;
-};
-
 export interface IExternalUrls {
   spotify: string;
 }
@@ -84,8 +66,4 @@ export interface ITracksAPIResponse {
   track_number: number;
   type: string;
   uri: string;
-  songUrl: string;
-  title: string;
-  artist: string;
-  albumArt: string;
 }

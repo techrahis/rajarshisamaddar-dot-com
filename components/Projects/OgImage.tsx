@@ -8,7 +8,7 @@ function OgImage({ src, alt }: { src: string; alt: string }) {
         src={`/static/images/project/${src}`}
         width={1200}
         height={630}
-        placeholder="blur"
+        // placeholder="blur"
         blurDataURL={src}
         quality={50}
         className="backdrop-blur-xl transition-all duration-300 lg:group-hover:scale-110"

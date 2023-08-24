@@ -1,6 +1,12 @@
-import { Song } from './types';
 import Image from 'next/image';
 import Link from 'next/dist/client/link';
+
+type Song = {
+  songUrl: string;
+  albumArt: string;
+  title: string;
+  artist: string;
+};
 
 interface TrackProps {
   ranking: number;

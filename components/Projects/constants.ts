@@ -1,102 +1,131 @@
-import { Project } from './types';
-
-export const projects: Project[] = [
+import { ProjectType } from './types';
+export const projects: ProjectType = [
   {
     title: 'Order Express V23',
     src: 'order-express-v23.jpg',
-    color: '#ffe7da',
     url: 'https://orderxpressv23.netlify.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
+
   {
     title: 'Apna Movie Database v1',
     src: 'amdb-v1.png',
-    color: '#ffeefa',
     url: 'https://apnamoviedatabase.web.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'Apna Movie Database v2',
     src: 'amdb.jpg',
-    color: '#ffeefa',
     url: 'https://amdb.rajarshisamaddar.com/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'SkyCast',
     src: 'skycast.jpg',
-    color: '#dbebff',
     url: 'https://skycast.rajarshisamaddar.com/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'Online Examination System',
     src: 'college-exam-project.png',
-    color: '#dbebff',
     url: 'https://todo-b5a3c.web.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'Portfolio 2021',
     src: 'portfolio-2021.png',
-    color: '#dbebff',
     url: 'https://ignorecrowdofficial.web.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'Portfolio 2022',
     src: 'portfolio-2022.png',
-    color: '#dbebff',
     url: 'https://rajarshi-samaddar.web.app/',
-    role: 'Fullstack Developer',
+
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'Portfolio 2023',
     src: 'portfolio-2023.png',
-    color: '#dbebff',
     url: 'https://www.rajarshisamaddar.com/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'AquaJar Tracker',
     src: 'aquajar-tracker.png',
-    color: '#dbebff',
     url: 'https://aquajartracker.web.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'Apna Task Manager',
     src: 'apna-task-manager.jpg',
-    color: '#e4daff',
     url: 'https://apna-task-manager.netlify.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'Trex Game',
     src: 'trex.png',
-    color: '#e4daff',
     url: 'https://trex-b0f4e.web.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'FPS Game',
     src: 'apna-shooter.png',
-    color: '#e4daff',
     url: 'https://apnashoooter.web.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'Car Race Game',
     src: 'car-race.png',
-    color: '#e4daff',
     url: 'https://karts-2dafc.web.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
   {
     title: 'Calculator PWA',
     src: 'calculator.png',
-    color: '#e4daff',
     url: 'https://ignorecrowd.web.app/',
-    role: 'Fullstack Developer',
+    keywords: ['HTML', 'CSS'],
+    github: 'https://github.com/rajarshisamaddar',
+    description:
+      'Exercitation ipsum excepteur in tempor cillum est aliqua minim dolor duis dolore elit eu. Elit duis exercitation incididunt deserunt esse eu consequat officia dolore veniam et et. Occaecat quis minim sint laborum. Incididunt velit laborum duis eiusmod ex magna fugiat laborum. Ut dolor occaecat aute deserunt ex duis eu deserunt. Sunt nostrud aute aliquip deserunt nostrud nulla fugiat laboris veniam qui commodo exercitation voluptate qui. Consectetur voluptate do aliquip deserunt aliqua ex dolore in ad reprehenderit minim tempor ut.',
   },
 ];

@@ -7,7 +7,7 @@ export default function Skill() {
       <div className="movieScroll mx-auto max-w-3xl px-4 sm:px-9 xl:max-w-5xl xl:px-0">
         <div className="mt-10">
           <h1 className="mb-10 text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
-            My Top <span className="text-[#007acc] dark:text-[#2baaff]">Skills</span>
+            My Top Skills
           </h1>
           <div className="grid grid-cols-3 gap-4">
             {skills.map((skill, index) => {

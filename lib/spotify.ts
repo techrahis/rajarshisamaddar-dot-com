@@ -1,50 +1,101 @@
-const client_id = process.env.SPOTIFY_CLIENT_ID || '';
-const client_secret = process.env.SPOTIFY_CLIENT_SECRET || '';
-const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN || '';
+import { IArtistsAPIResponse, ITracksAPIResponse } from './interface';
 
-const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
-const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
-const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=short_term`;
-const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
+const client_id = process.env.SPOTIFY_CLIENT_ID;
+const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
+const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 
-const getAccessToken = async () => {
-  const response = await fetch(TOKEN_ENDPOINT, {
+type SpotifyAccessToken = {
+  access_token: string;
+};
+
+/**
+ * Makes a request to the Spotify API to obtain a new access token using a refresh token.
+ */
+const getAccessToken = async (): Promise<SpotifyAccessToken> => {
+  // Make a POST request to the Spotify API to request a new access token
+  const response = await fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
     headers: {
-      Authorization: `Basic ${basic}`,
+      // Set the Authorization header with the client ID and client secret encoded in base64
+      Authorization: `Basic ${Buffer.from(`${client_id}:${client_secret}`).toString('base64')}`,
       'Content-Type': 'application/x-www-form-urlencoded',
     },
+    // Set the body of the request to include the refresh token and grant type
     body: new URLSearchParams({
       grant_type: 'refresh_token',
-      refresh_token,
+      refresh_token: refresh_token!,
     }),
-    next: {
-      revalidate: 3600,
-    },
+    cache: 'no-store',
   });
 
+  // Return the JSON response from the API
   return response.json();
 };
 
-export const getNowPlaying = async () => {
-  const { access_token } = await getAccessToken();
+/**
+ * Makes a request to the Spotify API to retrieve the user's top tracks.
+ */
+export const getTopTracks = async (): Promise<ITracksAPIResponse[]> => {
+  // Obtain an access token
+  const { access_token }: { access_token: string } = await getAccessToken();
 
-  return fetch(NOW_PLAYING_ENDPOINT, {
-    headers: {
-      Authorization: `Bearer ${access_token}`,
-    },
-    next: {
-      revalidate: 30,
-    },
-  });
+  // Make a request to the Spotify API to retrieve the user's top tracks in last 4 weeks
+
+  const response = await fetch(
+    'https://api.spotify.com/v1/me/top/tracks?limit=10&time_range=short_term',
+    {
+      headers: {
+        // Set the Authorization header with the access token
+        Authorization: `Bearer ${access_token}`,
+      },
+    }
+  );
+
+  // Handle the response and convert it to the expected type
+  if (!response.ok) {
+    throw new Error('Failed to fetch top artists.');
+  }
+  const data = await response.json();
+  return data.items as ITracksAPIResponse[];
 };
 
-export const getTopTracks = async () => {
+/**
+ * Makes a request to the Spotify API to retrieve the user's top artists.
+ */
+export const topArtists = async (): Promise<IArtistsAPIResponse[]> => {
+  // Obtain an access token
   const { access_token } = await getAccessToken();
 
-  return fetch(TOP_TRACKS_ENDPOINT, {
+  // Make a request to the Spotify API to retrieve the user's top artists in last 4 weeks
+  const response = await fetch('https://api.spotify.com/v1/me/top/artists?limit=5', {
     headers: {
+      // Set the Authorization header with the access token
       Authorization: `Bearer ${access_token}`,
     },
+  });
+
+  // Handle the response and convert it to the expected type
+  if (!response.ok) {
+    throw new Error('Failed to fetch top artists.');
+  }
+
+  const data = await response.json();
+  return data.items as IArtistsAPIResponse[];
+};
+
+/**
+ * Makes a request to the Spotify API to retrieve the currently playing song for the user.
+ */
+export const currentlyPlayingSong = async () => {
+  // Obtain an access token
+  const { access_token } = await getAccessToken();
+
+  // Make a request to the Spotify API to retrieve the currently playing song for the user
+  return fetch('https://api.spotify.com/v1/me/player/currently-playing', {
+    headers: {
+      // Set the Authorization header with the access token
+      Authorization: `Bearer ${access_token}`,
+    },
+    cache: 'no-store',
   });
 };

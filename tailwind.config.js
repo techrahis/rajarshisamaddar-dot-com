@@ -33,7 +33,7 @@ module.exports = {
       },
       fontFamily: {
         // sans: ['Barlow', ...defaultTheme.fontFamily.sans],
-        sans: ['Raleway', ...defaultTheme.fontFamily.sans],
+        sans: ['Raleway', 'normal', ...defaultTheme.fontFamily.sans],
         sarina: ['Sarina', 'cursive'],
       },
       gradientColorStops: {

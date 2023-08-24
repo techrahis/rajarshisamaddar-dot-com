@@ -1,12 +1,10 @@
-export interface Project {
+export type Project = {
   title: string;
   src: string;
-  color: string;
+  github: string;
   url: string;
-  role: string;
-}
+  keywords: string[];
+  description: string;
+};
 
-export interface ProjectModal {
-  active: boolean;
-  index: number;
-}
+export type ProjectType = Project[];

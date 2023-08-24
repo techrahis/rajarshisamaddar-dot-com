@@ -2,32 +2,36 @@ import OgImage from './OgImage';
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
 import { MdOutlineLink } from 'react-icons/md';
+import { Project } from './types';
 
-export default function ProjectItem({ title, url, image }: any) {
+export default function ProjectItem({ data }: { data: Project }) {
   return (
     <>
       <div className="mt-[30%] flex max-w-2xl flex-col items-center gap-8 rounded-lg bg-zinc-50 p-5 shadow-md transition-all dark:bg-zinc-800 sm:mt-8 sm:flex-row sm:p-10">
-        <OgImage src={image} alt={title} />
+        <OgImage src={data.src} alt={data.title} />
 
         <div className="flex flex-col justify-start gap-3">
-          <h1 className="font-bold text-neutral-900 dark:text-neutral-200">{title}</h1>
+          <h1 className="font-bold text-neutral-900 dark:text-neutral-200">{data.title}</h1>
           <p className="line-clamp-5 text-sm text-gray-400 dark:text-neutral-400">
-            Demo description Nostrud laborum culpa Lorem veniam eiusmod magna ullamco tempor ullamco
-            aute. Sint do reprehenderit excepteur fugiat ad velit minim cupidatat nisi labore
-            consequat aliqua anim. Veniam eu amet ullamco nulla nostrud ipsum labore consequat.
-            Excepteur laborum ut est aute reprehenderit pariatur consequat consequat labore tempor
-            id. Ad occaecat eu in est tempor excepteur incididunt.
+            {data.description}
           </p>
 
           <div className="flex flex-wrap items-center gap-1">
-            <span className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-500 dark:bg-zinc-900">
-              hgjgh
-            </span>
+            {data.keywords.map((tool, key) => {
+              return (
+                <span
+                  key={key}
+                  className="rounded bg-zinc-200 px-2 py-1 text-xs text-gray-500 dark:bg-zinc-900"
+                >
+                  {tool}
+                </span>
+              );
+            })}
           </div>
 
           <div className="mt-auto flex w-fit items-center gap-4 p-2">
             <Link
-              href={url}
+              href={data.github}
               title="Source Code on GitHub"
               target="_blank"
               rel="noopener noreferrer"
@@ -36,9 +40,9 @@ export default function ProjectItem({ title, url, image }: any) {
               <BsGithub className="h-6 w-6 transition-all hover:scale-110 active:scale-90" />
             </Link>
 
-            {url && (
+            {data.url && (
               <Link
-                href={url}
+                href={data.url}
                 title="Live Preview"
                 target="_blank"
                 rel="noopener noreferrer"

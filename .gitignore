@@ -8,6 +8,9 @@
 yarn.lock
 .vscode
 
+public/sw.js
+public/workbox-*
+
 # testing
 /coverage
 
