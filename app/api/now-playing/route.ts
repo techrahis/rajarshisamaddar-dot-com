@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidateTag } from 'next/cache';
 import { currentlyPlayingSong } from '../../../lib/spotify';
 
 export async function GET() {
@@ -26,12 +27,16 @@ export async function GET() {
   //   "public, s-maxage=60, stale-while-revalidate=10"
   // );
 
-  return NextResponse.json({
+  const data = {
     album,
     albumImageUrl,
     artist,
     isPlaying,
     songUrl,
     title,
-  });
+  };
+
+  revalidateTag('/api/now-playing');
+
+  return NextResponse.json(data);
 }
