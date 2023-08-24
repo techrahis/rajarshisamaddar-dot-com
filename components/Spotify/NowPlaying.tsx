@@ -8,10 +8,10 @@ import fetcher from '../../lib/fetcher';
 export default function NowPlaying() {
   const { data: nowPlaying } = useSWR('/api/now-playing', fetcher, {
     // revalidateIfStale: true,
-    revalidateOnFocus: true,
+    // revalidateOnFocus: true,
     // revalidateOnReconnect: true,
     // suspense: true,
-    // refreshInterval: 1000,
+    refreshInterval: 10000,
   });
 
   if (!nowPlaying?.isPlaying) {
