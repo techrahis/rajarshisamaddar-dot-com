@@ -5,6 +5,7 @@ import { CoreContent } from '@/lib/utils/contentlayer';
 import type { Blog } from 'contentlayer/generated';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { BlogCardAnimation } from '@/components/FramerMotion/FramerMotionVariants';
 
 export interface PostCardProps {
   posts: CoreContent<Blog>[];
@@ -14,13 +15,14 @@ export interface PostCardProps {
 export default function PostCard({ posts, showTags = true }: PostCardProps) {
   return (
     <ul>
-      {posts.map(({ slug, title, tags, summary }, index) => (
+      {posts.map(({ slug, title, tags, summary }) => (
         <motion.li
           key={slug}
           className="py-0"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6, delay: index / 10 }}
+          variants={BlogCardAnimation}
+          initial={'hidden'}
+          whileInView={'visible'}
+          viewport={{ once: true }}
         >
           <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`} legacyBehavior>
             <article className="mt-4 cursor-pointer gap-3 space-y-2 bg-opacity-20 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">

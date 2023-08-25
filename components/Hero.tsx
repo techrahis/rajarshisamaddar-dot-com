@@ -7,6 +7,7 @@ import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 import { ScrollContext } from './Providers/ScrollProvider';
 import { renderCanvas } from './renderCanvas';
 import { FiDownload } from 'react-icons/fi';
+import { opacityVariant, popUp } from '@/components/FramerMotion/FramerMotionVariants';
 
 export default function Hero(): ReactElement {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -30,6 +31,8 @@ export default function Hero(): ReactElement {
         web.
       </h1>
       <motion.div
+        initial="hidden"
+        whileInView="visible"
         className="relative z-10 flex h-[calc(100vh-81px)] items-center md:h-[calc(100vh-116px)]"
         animate={{
           transform: `translateY(${progress * 20}vh)`,
@@ -37,27 +40,35 @@ export default function Hero(): ReactElement {
         transition={{ type: 'spring', stiffness: 50 }}
       >
         <div className="mx-auto w-screen max-w-3xl px-4 sm:px-9 xl:max-w-5xl xl:px-0">
-          <div className="-mt-36">
+          <div className="-mt-20">
             <div
               ref={ref}
               className="flex cursor-default flex-col items-center justify-center space-y-14 text-center"
             >
               <div>
-                <h1 className="font-sarina text-5xl font-bold lg:text-6xl">Rajarshi Samaddar</h1>
-                <p className="mt-2 font-medium">Full-Stack Software Developer & Technical Writer</p>
-                <p className="mt-3 font-medium">
+                <motion.h1
+                  variants={opacityVariant}
+                  className="font-sarina text-5xl font-bold lg:text-6xl"
+                >
+                  Rajarshi Samaddar
+                </motion.h1>
+                <motion.p variants={opacityVariant} className="mt-2 font-semibold">
+                  Full-Stack Software Developer & Technical Writer
+                </motion.p>
+                <motion.p variants={opacityVariant} className="mt-3 font-semibold">
                   I am currently building things for the web while pursuing my Bachelor Degree in
                   Computer Science. I can code in Python, Java, JavaScript, etc.
-                </p>
+                </motion.p>
               </div>
-
-              <Link
-                href="/resume"
-                className="mt-9 flex max-w-xs select-none items-center justify-center gap-2 rounded-md border border-gray-500 px-5 py-2 outline-none transition-transform  active:scale-95 dark:border-gray-400 "
-              >
-                <FiDownload />
-                <p>Resume</p>
-              </Link>
+              <motion.div variants={popUp}>
+                <Link
+                  href="/resume"
+                  className="flex max-w-xs select-none items-center justify-center gap-2 rounded-md border-2 border-[#de1d8d] px-5 py-2 outline-none transition-transform  active:scale-95 dark:border-gray-400 "
+                >
+                  <FiDownload color="#de1d8d" />
+                  <p className="font-semibold text-[#de1d8d]">Resume</p>
+                </Link>
+              </motion.div>
             </div>
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 transform md:bottom-8">
               <div

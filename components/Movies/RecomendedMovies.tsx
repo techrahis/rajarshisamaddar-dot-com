@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import MovieCard from './MovieCard';
 import { movies } from './constant';
+import AnimatedDiv from '@/components/FramerMotion/AnimatedDiv';
 
 function RecomendedMovies() {
   return (
@@ -12,11 +15,11 @@ function RecomendedMovies() {
             <span className="text-[#0086B4] dark:text-[#00A8E1]"> TV </span>
             Series
           </h1>
-          <div className="horizontal-scrollbar flex items-center gap-2 overflow-x-scroll py-5 md:gap-4">
+          <AnimatedDiv className="horizontal-scrollbar flex items-center gap-2 overflow-x-scroll py-5 md:gap-4">
             {movies.map((movie) => (
               <MovieCard key={movie.id} movie={movie} />
             ))}
-          </div>
+          </AnimatedDiv>
         </div>
       </div>
     </>

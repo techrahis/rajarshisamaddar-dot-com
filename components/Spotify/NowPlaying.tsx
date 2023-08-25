@@ -15,7 +15,7 @@ import fetcher from '../../lib/fetcher';
 
 export default function NowPlaying() {
   const { data: nowPlaying } = useSWR(
-    'https://api-rajarshisamaddar-com.vercel.app/now-playing',
+    'https://api.rajarshisamaddar.com/spotify/now-playing',
     fetcher,
     {
       refreshInterval: 30000,

@@ -1,35 +1,28 @@
-import { getTopTracks } from '@/lib/spotify';
+'use client';
 import Track from './Track';
-import { Song, TrackInfo } from './types';
+import fetcher from '../../lib/fetcher';
+import useSWR from 'swr';
 
-async function fetchTopTracks(): Promise<Song[] | null> {
-  try {
-    const response = await getTopTracks();
-    const { items } = await response.json();
-
-    const tracks = items.slice(0, 10).map((track: TrackInfo) => ({
-      artist: track.artists.map((_artist) => _artist.name).join(', '),
-      songUrl: track.external_urls.spotify,
-      title: track.name,
-      //@ts-ignore
-      albumArt: track.album.images[0].url,
-    }));
-
-    return tracks;
-  } catch (e) {
-    if (e instanceof Error) {
-      console.error(e.message);
+export default function TopTracks() {
+  const { data: topTracks } = useSWR(
+    'https://api.rajarshisamaddar.com/spotify/top-tracks',
+    fetcher,
+    {
+      refreshInterval: 30000,
     }
-  }
-
-  return null;
-}
-
-export default async function TopTracks() {
-  const topTracks = await fetchTopTracks();
+  );
 
   if (!topTracks) {
-    return null;
+    return (
+      <div className="pt-10">
+        <h1 className="mb-2 text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
+          My <span className="text-green-700 dark:text-green-500">Spotify</span> Top Streamed Songs
+        </h1>
+        <p className="mb-10 font-medium">
+          <span className="font-semibold">Loading from the fastest API please wait...</span>
+        </p>
+      </div>
+    );
   }
 
   return (

@@ -1,13 +1,19 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { AiFillStar } from 'react-icons/ai';
 import { MovieType } from './types';
+import { motion } from 'framer-motion';
+import { fromLeftChildren } from '@/components/FramerMotion/FramerMotionVariants';
 
 export default function MovieCard({ movie }: { movie: MovieType }) {
   return (
     <Link href={movie.url} target="_blank" rel="noopener noreferrer">
-      <div className="group relative rounded-3xl p-3 shadow-md transition-[opacity,transform] duration-500 dark:bg-zinc-800 dark:text-gray-100">
+      <motion.div
+        variants={fromLeftChildren}
+        className="group relative rounded-3xl p-3 shadow-md transition-[opacity,transform] duration-500 dark:bg-zinc-800 dark:text-gray-100"
+      >
         <div className="relative -mt-7 h-64 w-44 overflow-hidden rounded-2xl shadow-lg">
           <Image
             className="rounded-2xl object-cover transition-transform lg:group-hover:scale-105"
@@ -27,7 +33,7 @@ export default function MovieCard({ movie }: { movie: MovieType }) {
           <MovieWatchedStatus isWatched={movie.watched} rating={movie.rating} />
           <p className="-z-1 text-sm font-medium ">{movie.name}</p>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }
