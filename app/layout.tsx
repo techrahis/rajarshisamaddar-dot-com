@@ -11,6 +11,7 @@ import ThemeProvider from '@/components/Providers/ThemeProvider';
 export const metadata = {
   title: 'Rajarshi Samaddar',
   description: 'I build things for the web.',
+  manifest: '/manifest.json',
 };
 
 interface RootLayoutProps {
@@ -29,7 +30,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-        <link rel="manifest" href="manifest.webmanifest" />
       </head>
       <body className="bg-white text-black antialiased dark:bg-black dark:text-white">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>

@@ -1,12 +1,12 @@
 {
-  "theme_color": "#f69435",
-  "background_color": "#f69435",
+  "theme_color": "#de1d8d",
+  "background_color": "#ffffff",
   "display": "minimal-ui",
   "scope": "/",
   "start_url": "/",
   "name": "Rajarshi Samaddar",
-  "short_name": "rajarshisamaddar.com",
-  "description": "rajarshisamaddar.com",
+  "short_name": "rajarshi",
+  "description": "Full-Stack Software Developer & Technical Writer",
   "icons": [
     {
       "src": "/icon-192x192.png",
