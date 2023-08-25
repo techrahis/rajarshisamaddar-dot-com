@@ -5,16 +5,24 @@ import Image from 'next/image';
 import useSWR from 'swr';
 import fetcher from '../../lib/fetcher';
 
-export default function NowPlaying() {
-  const { data: nowPlaying } = useSWR('/api/now-playing', fetcher, {
-    // revalidateIfStale: true,
-    // revalidateOnFocus: true,
-    // revalidateOnReconnect: true,
-    // suspense: true,
-    refreshInterval: 10000,
-  });
+//   const { data: nowPlaying } = useSWR('/api/now-playing', fetcher, {
+//     // revalidateIfStale: true,
+//     // revalidateOnFocus: true,
+//     // revalidateOnReconnect: true,
+//     // suspense: true,
+//     refreshInterval: 10000,
+//   });
 
-  if (!nowPlaying?.isPlaying) {
+export default function NowPlaying() {
+  const { data: nowPlaying } = useSWR(
+    'https://api-rajarshisamaddar-com.vercel.app/now-playing',
+    fetcher,
+    {
+      refreshInterval: 30000,
+    }
+  );
+
+  if (!nowPlaying?.is_playing) {
     return (
       <div className="flex flex-row-reverse items-center justify-between gap-2 sm:flex-row sm:justify-start">
         <SiSpotify className="h-6 w-6" />
@@ -53,7 +61,7 @@ export default function NowPlaying() {
             <span className="hidden dark:text-gray-300 md:inline-flex">—</span>
 
             <p className="text-xs text-gray-600 dark:text-gray-400 sm:text-sm">
-              {nowPlaying.artist}
+              {nowPlaying.artists}
             </p>
           </div>
         </div>

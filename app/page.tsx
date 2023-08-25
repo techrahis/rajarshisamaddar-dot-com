@@ -23,7 +23,7 @@ export default function Page() {
       <Skills />
       <SectionContainer>
         <RecentPosts posts={posts} />
-        <Suspense fallback="loading..">
+        <Suspense fallback="Loading...">
           <TopTracks />
         </Suspense>
       </SectionContainer>

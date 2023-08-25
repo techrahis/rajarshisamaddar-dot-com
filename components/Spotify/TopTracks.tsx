@@ -1,25 +1,27 @@
 import { getTopTracks } from '@/lib/spotify';
 import Track from './Track';
-import { ITracksAPIResponse, ISpotifyArtist } from './types';
+import { Song, TrackInfo } from './types';
 
-async function fetchTopTracks(): Promise<ITracksAPIResponse[] | null> {
+async function fetchTopTracks(): Promise<Song[] | null> {
   try {
-    const items = await getTopTracks();
+    const response = await getTopTracks();
+    const { items } = await response.json();
 
-    const tracks = items.map((track) => ({
-      title: track.name,
-      artist: track.artists.map((artist: ISpotifyArtist) => artist.name).join(', '),
+    const tracks = items.slice(0, 10).map((track: TrackInfo) => ({
+      artist: track.artists.map((_artist) => _artist.name).join(', '),
       songUrl: track.external_urls.spotify,
+      title: track.name,
+      //@ts-ignore
       albumArt: track.album.images[0].url,
     }));
 
-    // @ts-ignore ⚠️
     return tracks;
   } catch (e) {
     if (e instanceof Error) {
       console.error(e.message);
     }
   }
+
   return null;
 }
 
