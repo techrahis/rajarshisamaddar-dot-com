@@ -1,15 +1,7 @@
 import { motion } from 'framer-motion';
 import { Variants } from 'framer-motion';
 
-/* Custom Animated Components types */
-export type AnimatedTAGProps = {
-  variants: Variants;
-  className?: string;
-  children: React.ReactNode;
-  infinity?: boolean;
-};
-
-export default function AnimatedDiv({ variants, className, children, infinity }: AnimatedTAGProps) {
+export default function AnimatedDiv({ variants, className, children, infinity }: any) {
   return (
     <motion.div
       initial="hidden"

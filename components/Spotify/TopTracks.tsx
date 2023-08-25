@@ -34,7 +34,7 @@ export default function TopTracks() {
         <span className="font-semibold">{topTracks[0].title}</span> is the most streamed song of
         mine in last 4 weeks. Here's my top tracks on Spotify updated daily.
       </p>
-      {topTracks.map((track, index) => (
+      {topTracks.map((track: any, index: any) => (
         <Track ranking={index + 1} key={track.songUrl} track={track} />
       ))}
     </div>
