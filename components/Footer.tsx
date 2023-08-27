@@ -19,25 +19,55 @@ export default function Footer() {
 
           <section className="grid grid-cols-3 gap-10 font-medium">
             <div className="flex flex-col gap-4 capitalize">
-              <ul>Section</ul>
-              <ul>About</ul>
-              <ul>Utilities</ul>
-              <ul>About</ul>
-              <ul>Utilities</ul>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Home</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Blog</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>About</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Certificates</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Snippets</ul>
+              </Link>
             </div>
             <div className="flex flex-col gap-4 capitalize">
-              <ul>Under</ul>
-              <ul>React</ul>
-              <ul>Python</ul>
-              <ul>About</ul>
-              <ul>Utilities</ul>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Projects</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Tailwind CSS</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>React.js</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Next.js</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Python</ul>
+              </Link>
             </div>
             <div className="flex flex-col gap-4 capitalize">
-              <ul>Construction</ul>
-              <ul>Projects</ul>
-              <ul>Certificates</ul>
-              <ul>About</ul>
-              <ul>Utilities</ul>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Utilities</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Notes</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>DMCA</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Privacy</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Contact</ul>
+              </Link>
             </div>
           </section>
 

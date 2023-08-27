@@ -50,7 +50,7 @@ export const fromLeftVariant: Variants = {
 };
 
 export const fromLeftChildren: Variants = {
-  hidden: { x: -100, opacity: 0 },
+  hidden: { x: -140, opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,

@@ -1,12 +1,12 @@
 {
-  "theme_color": "#de1d8d",
-  "background_color": "#ffffff",
-  "display": "minimal-ui",
+  "theme_color": "#000",
+  "background_color": "#fff",
+  "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "name": "Rajarshi Samaddar",
-  "short_name": "rajarshi",
-  "description": "Full-Stack Software Developer & Technical Writer",
+  "short_name": "r.",
+  "description": "I'm a Full-Stack Software Developer and Technical Writer. I share daily learning resources on my website, which can also be installed as a Progressive Web App for a seamless experience.",
   "icons": [
     {
       "src": "/icon-192x192.png",

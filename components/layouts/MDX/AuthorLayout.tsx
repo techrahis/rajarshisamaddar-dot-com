@@ -1,3 +1,4 @@
+'use client';
 import Image from '@/components/Image';
 import type { Authors } from 'contentlayer/generated';
 import { ReactNode } from 'react';
@@ -27,6 +28,8 @@ export default function AuthorLayout({ children, content }: Props) {
             src={avatar || ''}
             className="rounded-full object-scale-down"
             quality={50}
+            blurDataURL={avatar || ''}
+            placeholder="blur"
             loading="lazy"
           />
         </div>
