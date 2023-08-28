@@ -131,6 +131,6 @@ input:-webkit-autofill:focus {
 
 @layer base {
   body {
-    @apply bg-[#f2f5fa] dark:bg-black !important;
+    @apply bg-[#f2f5fa] dark:bg-[#181a1b] !important;
   }
 }

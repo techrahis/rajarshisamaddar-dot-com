@@ -1,9 +1,9 @@
 const withPWA = require('next-pwa')({
   dest: 'public',
-  disable: false,
+  // disable: false,
   // register: true,
   // skipWaiting: true,
-  // disable: process.env.NODE_ENV === 'development',
+  disable: process.env.NODE_ENV === 'development',
 });
 
 const { withContentlayer } = require('next-contentlayer');
