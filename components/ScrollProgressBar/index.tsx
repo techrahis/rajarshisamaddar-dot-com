@@ -6,7 +6,6 @@ const ScrollProgressBarComponent = dynamic(
   },
   { ssr: false }
 );
-
 const ScrollProgressBar = () => {
   return <ScrollProgressBarComponent />;
 };
