@@ -60,7 +60,7 @@ export default function NowPlaying() {
             </h3>
             <span className="hidden dark:text-gray-300 md:inline-flex">—</span>
 
-            <p className="text-xs text-gray-600 dark:text-gray-400 sm:text-sm">
+            <p className="text-sm text-gray-600 dark:text-gray-400 sm:text-sm">
               {nowPlaying.artists}
             </p>
           </div>

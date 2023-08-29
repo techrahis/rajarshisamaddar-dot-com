@@ -73,11 +73,11 @@ export default function Footer() {
 
           <div className="flex flex-col items-center space-y-2 sm:flex-row sm:justify-between sm:text-base">
             <ul className="flex space-x-2 text-lg">
-              <li>{`© ${new Date().getFullYear()}`}</li>
+              <li>{` © ${new Date().getFullYear()}`}</li>
               <li>{` • `}</li>
               <li>
                 <Link className="font-semibold" href="/">
-                  {siteMetadata.title}
+                  Rajarshi Samaddar
                 </Link>
               </li>
             </ul>
@@ -130,8 +130,8 @@ export default function Footer() {
             </ul>
           </div>
           <div className="relative flex items-center justify-center px-4 text-center font-medium">
-            <BsDot className="-ml-2 h-7 w-7 animate-ping text-green-500" />
             <div className="flex items-center gap-1">
+              <BsDot className="-ml-2 h-7 w-7 animate-ping text-green-500" />
               <p>
                 Powered by <span className="font-semibold">Next.js </span> and{' '}
                 <span className="font-semibold">Vercel</span>

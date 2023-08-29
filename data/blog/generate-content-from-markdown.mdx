@@ -1,0 +1,60 @@
+---
+title: 'Genarate Table Of Content From Markdown'
+date: '2023-08-29'
+tags: ['Snippets', 'React.js', 'Next.js', 'TypeScript']
+draft: false
+author: 'Rajarshi Samaddar'
+summary: 'Creating a Table of Contents manually is really a very intimidating task. So in this post, I will share you my code snippet that will help you to dynamically generating a Table of Contents from Markdown files programatically.'
+---
+
+Creating a Table of Contents manually is really a very intimidating task. So in this post, I will share you my code snippet that will help you to dynamically generating a Table of Contents from Markdown files programatically.
+
+```ts:TableOfContents.ts
+type TableItem = { level: number; heading: string}
+
+function getTableOfContents(markdown: string): TableItem[] {
+    const regXHeader = /#{1,6}.+/g;
+    const headingArray = markdown.match(regXHeader)
+      ? markdown.match(regXHeader)
+      : [];
+    return headingArray?.map((heading) => {
+      return {
+        level: heading.split("#").length - 1 - 2, // we starts from the 2nd heading that's why we subtract 2 and 1 is extra heading text
+        heading: heading.replace(/#{1,6}/, "").trim(),
+      };
+    });
+  }
+```
+
+If you implement the provided code, you'll be able to generate an output like the one shown below. This output can then be utilized in any way you prefer.
+
+```
+// 0 - h1
+// 5 - h6
+[
+    {
+        "level": 0,
+        "heading": "Introduction"
+    },
+    {
+        "level": 1,
+        "heading": "Need of foo"
+    },
+    {
+        "level": 1,
+        "heading": "How to Use foo?"
+    },
+    {
+        "level": 0,
+        "heading": "Another approach"
+    },
+    {
+        "level": 2,
+        "heading": "What Next?"
+    },
+    {
+        "level": 0,
+        "heading": "Wrapping up"
+    }
+]
+```

@@ -52,10 +52,10 @@ export default function Hero(): ReactElement {
                 >
                   Rajarshi Samaddar
                 </motion.h1>
-                <motion.p variants={opacityVariant} className="mt-2 font-semibold">
+                <motion.p variants={opacityVariant} className="mt-2 font-mono font-semibold">
                   Full-Stack Software Developer & Technical Writer
                 </motion.p>
-                <motion.p variants={opacityVariant} className="mt-3 font-semibold">
+                <motion.p variants={opacityVariant} className="mt-3 font-mono font-semibold">
                   I am currently building things for the web while pursuing my Bachelor Degree in
                   Computer Science. I can code in Python, Java, JavaScript, etc.
                 </motion.p>
@@ -66,14 +66,15 @@ export default function Hero(): ReactElement {
                   className="flex max-w-xs select-none items-center justify-center gap-2 rounded-md border-2 border-[#de1d8d] px-5 py-2 outline-none transition-transform  active:scale-95"
                 >
                   <FiDownload color="#de1d8d" />
-                  <p className="font-semibold text-[#de1d8d]">Resume</p>
+                  <p className="font-mono font-semibold text-[#de1d8d]">Resume</p>
                 </Link>
               </motion.div>
             </div>
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 transform md:bottom-8">
-              <div
+              <motion.div
+                variants={opacityVariant}
                 role="presentation"
-                className="flex cursor-pointer flex-col items-center justify-center"
+                className="flex animate-bounce cursor-pointer flex-col items-center justify-center"
                 onClick={() => {
                   const intro = document.querySelector('#intro');
 
@@ -81,7 +82,7 @@ export default function Hero(): ReactElement {
                 }}
               >
                 <HiOutlineArrowNarrowDown size={20} />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
