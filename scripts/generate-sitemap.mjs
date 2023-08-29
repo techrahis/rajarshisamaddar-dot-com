@@ -33,7 +33,7 @@ async function generate() {
                 <loc>https://www.rajarshisamaddar.com/projects/</loc>
             </url>
             <url>
-                <loc>https://www.rajarshisamaddar.com/uses/</loc>
+                <loc>https://www.rajarshisamaddar.com/utilities/</loc>
             </url>
             ${pages
               .concat(contentPages)
