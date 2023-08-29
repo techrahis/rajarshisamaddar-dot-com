@@ -7,7 +7,7 @@ import { redirect } from 'next/navigation';
 
 export const metadata = {
   title: 'Blog - Rajarshi Samaddar',
-  description: 'My Blogs - Rajarshi Samaddar',
+  description: 'My Blog - Rajarshi Samaddar',
 };
 
 export default function BlogPage({ params }: { params: { page: string } }) {

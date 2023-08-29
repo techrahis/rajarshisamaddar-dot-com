@@ -6,7 +6,7 @@ import { allBlogs } from 'contentlayer/generated';
 
 export const metadata = {
   title: 'Blog - Rajarshi Samaddar',
-  description: 'My Blogs - Rajarshi Samaddar',
+  description: 'My Blog - Rajarshi Samaddar',
 };
 
 export default function Blog() {
@@ -24,7 +24,7 @@ export default function Blog() {
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title="Blogs"
+        title="Blog"
       />
     </MainLayout>
   );
