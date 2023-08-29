@@ -14,24 +14,38 @@ export default function MovieCard({ movie }: { movie: MovieType }) {
         variants={fromLeftChildren}
         className="group relative rounded-3xl p-3 shadow-md transition-[opacity,transform] duration-500 dark:bg-zinc-800 dark:text-gray-100"
       >
-        <div className="relative -mt-7 h-64 w-44 overflow-hidden rounded-2xl shadow-lg">
-          <Image
-            className="rounded-2xl object-cover transition-transform lg:group-hover:scale-105"
-            src={movie.image}
-            alt={movie.name}
-            width={600}
-            height={720}
-            style={{
-              height: '100%',
-            }}
-            loading="lazy"
-            quality={25}
-          />
-        </div>
+        {movie.image ? (
+          <div className="relative -mt-7 h-64 w-44 overflow-hidden rounded-2xl shadow-lg">
+            <Image
+              className="rounded-2xl object-cover transition-transform lg:group-hover:scale-105"
+              src={movie.image}
+              alt={movie.name}
+              width={600}
+              height={720}
+              style={{
+                height: '100%',
+              }}
+              loading="lazy"
+              quality={25}
+            />
+          </div>
+        ) : (
+          <div className="relative -mt-7 h-64 w-44 animate-pulse overflow-hidden rounded-2xl bg-slate-200 shadow-lg dark:bg-slate-700"></div>
+        )}
 
         <div className="mt-2 mb-1 flex flex-col gap-2">
-          <MovieWatchedStatus isWatched={movie.watched} rating={movie.rating} />
-          <p className="-z-1 text-sm font-medium ">{movie.name}</p>
+          {movie.name ? (
+            <MovieWatchedStatus isWatched={movie.status} rating={movie.rating} />
+          ) : (
+            <div className="flex items-center justify-between text-xs">
+              <p className="relative h-3 w-12 animate-pulse rounded-full bg-yellow-300/70 px-4 py-0.5 text-yellow-700 dark:bg-yellow-300"></p>
+            </div>
+          )}
+          {movie.name ? (
+            <p className="-z-1 text-sm font-medium ">{movie.name}</p>
+          ) : (
+            <p className="-z-1 h-2 w-16 animate-pulse bg-slate-200 dark:bg-slate-400"></p>
+          )}
         </div>
       </motion.div>
     </Link>

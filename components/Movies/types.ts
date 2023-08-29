@@ -4,6 +4,6 @@ export type MovieType = {
   image: string;
   url: string;
   year: number;
-  watched: boolean;
+  status: boolean;
   rating: number;
 };
