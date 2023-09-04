@@ -48,14 +48,14 @@ export default function Hero(): ReactElement {
               <div>
                 <motion.h1
                   variants={opacityVariant}
-                  className="font-sarina text-5xl font-bold lg:text-6xl"
+                  className="font-sarina text-6xl font-bold lg:text-6xl"
                 >
                   Rajarshi Samaddar
                 </motion.h1>
-                <motion.p variants={opacityVariant} className="mt-2 font-mono font-semibold">
-                  Full-Stack Software Developer & Technical Writer
+                <motion.p variants={opacityVariant} className="mt-2 text-2xl font-extrabold">
+                  Full-Stack Software Engineer
                 </motion.p>
-                <motion.p variants={opacityVariant} className="mt-3 font-mono font-semibold">
+                <motion.p variants={opacityVariant} className="mt-3 text-xl font-extrabold">
                   I am currently building things for the web while pursuing my Bachelor Degree in
                   Computer Science. I can code in Python, Java, JavaScript, etc.
                 </motion.p>

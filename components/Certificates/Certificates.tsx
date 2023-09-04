@@ -34,11 +34,12 @@ function Certificates() {
               <div className="flex flex-col ">
                 <Link
                   href={cer.url}
-                  className="text-sm font-semibold text-neutral-900 hover:underline dark:text-neutral-200 sm:text-base md:text-lg"
+                  target="_blank"
+                  className="text-xl font-bold leading-8 tracking-tight text-primary-500 duration-300 hover:text-primary-400"
                 >
                   {cer.title}
                 </Link>
-                <p className="text-xs text-gray-500">
+                <p className="text-sm text-gray-900 dark:text-gray-100">
                   {cer.orgName} &#x2022; {cer.issuedDate}
                 </p>
               </div>

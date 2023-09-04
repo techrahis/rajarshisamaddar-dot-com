@@ -14,8 +14,8 @@ export default function Page() {
           Certificates
         </h1>
         <p className="text-xl font-medium leading-7 text-gray-500 dark:text-gray-400">
-          I've participated in many contests, courses and test and get certified in many skills. You
-          can find the certificates below.
+          I've participated in many contests, courses and tests and got certified in many skills.
+          You can find the certificates below.
         </p>
         <Certificates />
       </div>

@@ -16,7 +16,7 @@ export default function UsesLayout({ children }: Props) {
         </span>
         <span className="text-gray-700  dark:text-gray-300">
           Last update on
-          <span className="font-semibold"> 22 August, 2023</span>
+          <span className="font-semibold"> September 4, 2023</span>
         </span>
       </div>
       <div className="prose max-w-none pb-8 text-justify text-sm dark:prose-dark md:text-lg xl:col-span-2">
