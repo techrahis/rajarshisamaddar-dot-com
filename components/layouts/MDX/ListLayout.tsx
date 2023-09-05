@@ -55,7 +55,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             aria-label="Search posts"
             type="text"
             onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Press (CTRL + /) to search posts"
+            placeholder="Press (CTRL + /) to search"
             className="block w-full rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
           />
           <svg

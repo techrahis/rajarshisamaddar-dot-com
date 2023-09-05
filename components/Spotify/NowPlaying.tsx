@@ -25,11 +25,11 @@ export default function NowPlaying() {
   if (!nowPlaying?.is_playing) {
     return (
       <div className="flex flex-row-reverse items-center justify-between gap-2 sm:flex-row sm:justify-start">
-        <SiSpotify className="h-6 w-6" />
+        <SiSpotify className="h-6 w-6 text-green-500" />
         <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
-          <div className="font-semibold md:text-lg">Not Playing</div>
-          <span className="hidden md:inline-flex">—</span>
-          <p className="text-xs sm:text-sm">Spotify</p>
+          <div className="text-lg font-medium text-gray-900 dark:text-gray-100">Not Playing</div>
+          <span className="hidden text-gray-900 dark:text-gray-100 md:inline-flex">—</span>
+          <p className="text-xs text-gray-600 dark:text-gray-400 sm:text-sm">Spotify</p>
         </div>
       </div>
     );
@@ -37,10 +37,11 @@ export default function NowPlaying() {
 
   return (
     <div className="flex flex-col gap-2">
-      <h4 className="text-lg font-semibold dark:text-gray-300">Now Playing</h4>
+      <h4 className="text-lg font-medium text-gray-900 dark:text-gray-100">Now Playing</h4>
       <Link
+        target="_blank"
         href={nowPlaying.songUrl}
-        className="flex items-center justify-between rounded-sm bg-gray-200 p-3 shadow-md dark:bg-zinc-800 sm:p-4"
+        className="flex items-center justify-between rounded-sm border-0 bg-gray-200 bg-opacity-50 p-3 dark:border-gray-900 dark:bg-gray-800 sm:p-4"
       >
         <div className="flex items-center gap-2 ">
           <div className="h-10 w-10">
@@ -55,10 +56,10 @@ export default function NowPlaying() {
             />
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center sm:gap-3">
-            <h3 className="animate- font-semibold text-black dark:text-white md:text-lg">
+            <h3 className="animate- font-medium text-gray-900 dark:text-gray-100 md:text-lg">
               {nowPlaying.title}
             </h3>
-            <span className="hidden dark:text-gray-300 md:inline-flex">—</span>
+            <span className="hidden text-gray-900 dark:text-gray-100 md:inline-flex">—</span>
 
             <p className="text-sm text-gray-600 dark:text-gray-400 sm:text-sm">
               {nowPlaying.artists}
@@ -66,7 +67,7 @@ export default function NowPlaying() {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <SiSpotify className="h-6 w-6 animate-[spin_2s_linear_infinite] text-green-700 dark:text-green-500" />
+          <SiSpotify className="h-6 w-6 animate-[spin_2s_linear_infinite] text-green-500" />
         </div>
       </Link>
     </div>

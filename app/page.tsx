@@ -14,7 +14,6 @@ import { Suspense } from 'react';
 export default function Page() {
   const sortedPosts = sortedBlogPost(allBlogs);
   const posts = allCoreContent(sortedPosts);
-
   return (
     <ScrollProvider>
       <Hero />

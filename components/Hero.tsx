@@ -48,14 +48,14 @@ export default function Hero(): ReactElement {
               <div>
                 <motion.h1
                   variants={opacityVariant}
-                  className="font-sarina text-6xl font-bold lg:text-6xl"
+                  className="font-sarina text-5xl font-bold lg:text-6xl"
                 >
                   Rajarshi Samaddar
                 </motion.h1>
-                <motion.p variants={opacityVariant} className="mt-2 text-2xl font-extrabold">
+                <motion.p variants={opacityVariant} className="mt-2 text-lg font-extrabold">
                   Full-Stack Software Engineer
                 </motion.p>
-                <motion.p variants={opacityVariant} className="mt-3 text-xl font-extrabold">
+                <motion.p variants={opacityVariant} className="text-md mt-3 font-extrabold">
                   I am currently building things for the web while pursuing my Bachelor Degree in
                   Computer Science. I can code in Python, Java, JavaScript, etc.
                 </motion.p>
@@ -63,10 +63,10 @@ export default function Hero(): ReactElement {
               <motion.div variants={popUp}>
                 <Link
                   href="/resume"
-                  className="flex max-w-xs select-none items-center justify-center gap-2 rounded-md border-2 border-[#de1d8d] px-5 py-2 outline-none transition-transform  active:scale-95"
+                  className="flex max-w-xs select-none items-center justify-center gap-2 rounded-md border border-primary-500 px-5 py-2 outline-none transition-transform  active:scale-95"
                 >
-                  <FiDownload color="#de1d8d" />
-                  <p className="font-mono font-semibold text-[#de1d8d]">Resume</p>
+                  <FiDownload className="text-primary-500" />
+                  <p className="font-medium text-primary-500 ">Resume</p>
                 </Link>
               </motion.div>
             </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import SectionContainer from '../SectionContainer';
 
 interface Props {
@@ -14,6 +14,10 @@ export default function MainLayout({ children }: Props) {
     enter: { opacity: 1, x: 0 },
     exit: { opacity: 0, x: 0 },
   };
+
+  // useEffect(() => {
+  //   const status = window.Notification.requestPermission();
+  // });
 
   return (
     <SectionContainer>

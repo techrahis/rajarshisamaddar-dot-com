@@ -20,7 +20,7 @@ export default function RecentPosts({ posts }: RecentPosts) {
         <PostCard posts={slicedPost} showTags={false} />
       </div>
       {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
+        <div className="flex justify-end pt-2 text-base font-medium leading-6">
           <Link href="/blog">
             <span className="underline-magical cursor-pointer font-bold" aria-label="all posts">
               Read All Post &rarr;

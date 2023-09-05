@@ -12,7 +12,7 @@ export default function MovieCard({ movie }: { movie: MovieType }) {
     <Link href={movie.url} target="_blank" rel="noopener noreferrer">
       <motion.div
         variants={fromLeftChildren}
-        className="group relative rounded-3xl p-3 shadow-md transition-[opacity,transform] duration-500 dark:bg-zinc-800 dark:text-gray-100"
+        className="group relative rounded-3xl bg-gray-200 bg-opacity-50 p-3 transition-[opacity,transform] duration-500 dark:bg-gray-800 dark:text-gray-100"
       >
         {movie.image ? (
           <div className="relative -mt-7 h-64 w-44 overflow-hidden rounded-2xl shadow-lg">
@@ -30,7 +30,7 @@ export default function MovieCard({ movie }: { movie: MovieType }) {
             />
           </div>
         ) : (
-          <div className="relative -mt-7 h-64 w-44 animate-pulse overflow-hidden rounded-2xl bg-slate-200 shadow-lg dark:bg-slate-700"></div>
+          <div className="relative -mt-7 h-64 w-44 animate-pulse overflow-hidden rounded-2xl bg-gray-200 bg-opacity-50 shadow-lg dark:bg-gray-800"></div>
         )}
 
         <div className="mt-2 mb-1 flex flex-col gap-2">

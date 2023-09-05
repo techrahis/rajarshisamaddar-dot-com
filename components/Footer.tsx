@@ -17,7 +17,7 @@ export default function Footer() {
             <NowPlaying />
           </Suspense>
 
-          <section className="grid grid-cols-3 gap-10 font-medium">
+          <section className="grid grid-cols-4 gap-10 font-medium text-gray-600 dark:text-gray-400">
             <div className="flex flex-col gap-4 capitalize">
               <Link className="hover:text-black dark:hover:text-white" href="/">
                 <ul>Home</ul>
@@ -33,6 +33,23 @@ export default function Footer() {
               </Link>
               <Link className="hover:text-black dark:hover:text-white" href="/">
                 <ul>Snippets</ul>
+              </Link>
+            </div>
+            <div className="flex flex-col gap-4 capitalize">
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Projects</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Tailwind CSS</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>React.js</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Next.js</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/">
+                <ul>Python</ul>
               </Link>
             </div>
             <div className="flex flex-col gap-4 capitalize">
@@ -72,16 +89,16 @@ export default function Footer() {
           </section>
 
           <div className="flex flex-col items-center space-y-2 sm:flex-row sm:justify-between sm:text-base">
-            <ul className="flex space-x-2 text-lg">
+            <ul className="flex space-x-2 text-lg text-gray-600 dark:text-gray-400">
               <li>{` © ${new Date().getFullYear()}`}</li>
               <li>{` • `}</li>
               <li>
-                <Link className="font-semibold" href="/">
+                <Link className="font-medium hover:text-primary-500" href="/">
                   Rajarshi Samaddar
                 </Link>
               </li>
             </ul>
-            <ul className="flex cursor-pointer items-center space-x-5">
+            <ul className="flex cursor-pointer items-center space-x-5 text-gray-600 dark:text-gray-400">
               <li>
                 <a
                   href={`mailto:${siteMetadata.email}`}
@@ -132,9 +149,9 @@ export default function Footer() {
           <div className="relative flex items-center justify-center px-4 text-center font-medium">
             <div className="flex items-center gap-1">
               <BsDot className="-ml-2 h-7 w-7 animate-ping text-green-500" />
-              <p>
-                Powered by <span className="font-semibold">Next.js </span> and{' '}
-                <span className="font-semibold">Vercel</span>
+              <p className="text-gray-600 dark:text-gray-400">
+                Powered by <span className="font-medium">Next.js </span> and{' '}
+                <span className="font-medium">Vercel</span>
               </p>
             </div>
           </div>

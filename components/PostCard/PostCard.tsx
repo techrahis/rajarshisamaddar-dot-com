@@ -25,7 +25,7 @@ export default function PostCard({ posts, showTags = true }: PostCardProps) {
           viewport={{ once: true }}
         >
           <Link href={`/blog/${slug}`} aria-label={`Read "${title}"`} legacyBehavior>
-            <article className="mt-4 cursor-pointer gap-3 space-y-2 bg-opacity-20 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+            <article className="mt-6 cursor-pointer gap-3 space-y-2 bg-opacity-20 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
               <div className="space-y-3 xl:col-span-4">
                 <span className="text-2xl font-bold leading-8 tracking-tight">
                   <Link href={`/blog/${slug}`}>

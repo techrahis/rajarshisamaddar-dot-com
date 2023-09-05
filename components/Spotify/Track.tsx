@@ -10,10 +10,12 @@ interface TrackProps {
 export default function Track({ track, ranking }: TrackProps) {
   return (
     <Link href={track.songUrl ? track.songUrl : '/'} target="_blank">
-      <div className="flex w-full max-w-5xl flex-row border border-gray-200 p-4 hover:bg-zinc-50 dark:border-zinc-800 dark:hover:bg-zinc-800">
+      <div className="flex w-full max-w-5xl flex-row border border-gray-200 border-opacity-50 bg-opacity-50 p-4 hover:bg-gray-200 dark:border-gray-800 dark:hover:bg-gray-800">
         <div className="flex flex-col items-center">
           <div className="h-10">
-            <p className="text-md w-8 font-bold text-gray-500 dark:text-gray-600">#{ranking}</p>
+            <p className="text-md w-8 font-extrabold text-gray-600 dark:text-gray-400">
+              #{ranking}
+            </p>
           </div>
         </div>
 
@@ -46,7 +48,7 @@ export default function Track({ track, ranking }: TrackProps) {
           )}
 
           {track.artist ? (
-            <p className="w-60 truncate text-gray-500 dark:text-gray-400 sm:w-96 md:w-full">
+            <p className="w-60 truncate text-gray-600 dark:text-gray-400 sm:w-96 md:w-full">
               {track.artist}
             </p>
           ) : (
