@@ -62,7 +62,7 @@ export default function Hero(): ReactElement {
               </div>
               <motion.div variants={popUp}>
                 <Link
-                  href="/resume"
+                  href="https://api.rajarshisamaddar.com/get-resume"
                   className="flex max-w-xs select-none items-center justify-center gap-2 rounded-md border border-primary-500 px-5 py-2 outline-none transition-transform  active:scale-95"
                 >
                   <FiDownload className="text-primary-500" />

@@ -13,10 +13,6 @@
     {
       "source": "/sitemap",
       "destination": "/sitemap.xml"
-    },
-    {
-      "source": "/resume",
-      "destination": "/static/resume/RAJARSHI_SAMADDAR_RESUME.pdf"
     }
   ]
 }
