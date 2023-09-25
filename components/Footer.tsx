@@ -22,68 +22,108 @@ export default function Footer() {
               <Link className="hover:text-black dark:hover:text-white" href="/">
                 <ul>Home</ul>
               </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
+              <Link className="hover:text-black dark:hover:text-white" href="/blog">
                 <ul>Blog</ul>
               </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
+              <Link className="hover:text-black dark:hover:text-white" href="/about">
                 <ul>About</ul>
               </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
+              <Link className="hover:text-black dark:hover:text-white" href="/projects">
+                <ul>Projects</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/certificates">
                 <ul>Certificates</ul>
               </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Snippets</ul>
-              </Link>
             </div>
             <div className="flex flex-col gap-4 capitalize">
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Projects</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Tailwind CSS</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>React.js</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Next.js</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Python</ul>
-              </Link>
-            </div>
-            <div className="flex flex-col gap-4 capitalize">
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Projects</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Tailwind CSS</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>React.js</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Next.js</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Python</ul>
-              </Link>
-            </div>
-            <div className="flex flex-col gap-4 capitalize">
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Utilities</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Notes</ul>
-              </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
+              <Link className="hover:text-black dark:hover:text-white" href="/dmca">
                 <ul>DMCA</ul>
               </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Privacy</ul>
+              <Link className="hover:text-black dark:hover:text-white" href="/shop">
+                <ul>Shop</ul>
               </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/">
-                <ul>Contact</ul>
+              <Link className="hover:text-black dark:hover:text-white" href="/utilities">
+                <ul>Utilities</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/dashboard">
+                <ul>Dashboard</ul>
+              </Link>
+              <Link className="hover:text-black dark:hover:text-white" href="/privacy-policy">
+                <ul>Privacy Policy</ul>
+              </Link>
+            </div>
+            <div className="flex flex-col gap-4 capitalize">
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://tailwindcss.com/"
+              >
+                <ul>Tailwind CSS</ul>
+              </Link>
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://react.dev/"
+              >
+                <ul>React.js</ul>
+              </Link>
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://nextjs.org/"
+              >
+                <ul>Next.js</ul>
+              </Link>
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://www.djangoproject.com/"
+              >
+                <ul>Django</ul>
+              </Link>
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://expressjs.com/"
+              >
+                <ul>Express.js</ul>
+              </Link>
+            </div>
+            <div className="flex flex-col gap-4 capitalize">
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://aws.amazon.com/"
+              >
+                <ul>AWS</ul>
+              </Link>
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://vercel.com/"
+              >
+                <ul>Vercel</ul>
+              </Link>
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://appwrite.io/"
+              >
+                <ul>Appwrite</ul>
+              </Link>
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://firebase.google.com/"
+              >
+                <ul>Firebase</ul>
+              </Link>
+              <Link
+                className="hover:text-black dark:hover:text-white"
+                target="_blank"
+                href="https://www.postgresql.org/"
+              >
+                <ul>PostgeSQL</ul>
               </Link>
             </div>
           </section>

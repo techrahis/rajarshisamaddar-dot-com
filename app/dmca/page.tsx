@@ -3,7 +3,8 @@ import React from 'react';
 function page() {
   return (
     <div>
-      <h1>Privacy Policy - 🚧</h1>
+      <h1>DMCA</h1>
+      <h2>Under dev</h2>
     </div>
   );
 }
