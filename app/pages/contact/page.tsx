@@ -3,10 +3,10 @@ import MainLayout from '@/layouts/MainLayout';
 import { toast } from 'react-toastify';
 import { useEffect, useState } from 'react';
 
-export const metadata = {
-  title: 'Contact - Rajarshi Samaddar',
-  description: 'Contact - Rajarshi Samaddar',
-};
+// export const metadata = {
+//   title: 'Contact - Rajarshi Samaddar',
+//   description: 'Contact - Rajarshi Samaddar',
+// };
 
 export default function Page() {
   const [FullName, setFullName] = useState('');
