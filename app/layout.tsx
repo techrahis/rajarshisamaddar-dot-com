@@ -7,6 +7,8 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import LenisProvider from '@/components/Providers/LenisProvider';
 import ThemeProvider from '@/components/Providers/ThemeProvider';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
   title: 'Rajarshi Samaddar',
@@ -33,6 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body className="bg-white text-black antialiased dark:bg-black dark:text-white">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <ToastContainer />
           <Header />
           <LenisProvider>
             <main>{children}</main>

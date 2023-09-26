@@ -1,7 +1,6 @@
 'use client';
-
 import { motion } from 'framer-motion';
-import { ReactNode, useEffect } from 'react';
+import { ReactNode } from 'react';
 import SectionContainer from '../SectionContainer';
 
 interface Props {

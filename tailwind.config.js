@@ -8,7 +8,7 @@ module.exports = {
     './components/**/*.tsx',
     './layouts/**/*.tsx',
     './lib/**/*.ts',
-    './app/**/*.ts',
+    './app/**/*.tsx',
   ],
   darkMode: 'class',
   theme: {
