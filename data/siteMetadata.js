@@ -10,6 +10,7 @@ const siteMetadata = {
   image: '/static/images/avatar.webp',
   email: 'hello@rajarshisamaddar.com',
   github: 'https://github.com/rajarshisamaddar',
+  twitter: 'https://twitter.com/rajarshi1401',
   linkedin: 'https://www.linkedin.com/in/rajarshisamaddar/',
   leetcode: 'https://leetcode.com/rajarshisamaddar/',
   geeksforgeeks: 'https://auth.geeksforgeeks.org/user/rajarshisamaddar',

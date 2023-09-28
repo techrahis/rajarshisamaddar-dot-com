@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 import { AiFillLinkedin, AiFillMail } from 'react-icons/ai';
 import { FaGithub } from 'react-icons/fa';
+import { FaSquareXTwitter } from 'react-icons/fa6';
 import { SiLeetcode, SiGeeksforgeeks } from 'react-icons/si';
 import SectionContainer from './SectionContainer';
 import NowPlaying from './Spotify/NowPlaying';
@@ -126,7 +127,7 @@ export default function Footer() {
                 target="_blank"
                 href="https://www.postgresql.org/"
               >
-                <ul>PostgeSQL</ul>
+                <ul>PgSQL</ul>
               </Link>
             </div>
           </section>
@@ -169,10 +170,20 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={siteMetadata.leetcode}
+                  href={siteMetadata.twitter}
                   target="_blank"
                   rel="noreferrer"
                   aria-label="twitter"
+                >
+                  <FaSquareXTwitter className="sm:text-lg" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteMetadata.leetcode}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="leetcode"
                 >
                   <SiLeetcode className="sm:text-lg" />
                 </a>
@@ -182,7 +193,7 @@ export default function Footer() {
                   href={siteMetadata.geeksforgeeks}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="twitter"
+                  aria-label="geeksforgeeks"
                 >
                   <SiGeeksforgeeks className="sm:text-lg" />
                 </a>

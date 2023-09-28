@@ -16,15 +16,15 @@ import {
   SiNodedotjs,
   SiDjango,
   SiMicrosoftoffice,
-  SiMaterialui,
+  SiMui,
   SiBootstrap,
-  SiJava,
   SiRedux,
   SiAmazonaws,
   SiCplusplus,
   SiLinux,
   SiNginx,
 } from 'react-icons/si';
+import { FaJava } from 'react-icons/fa6';
 
 const skills = [
   {
@@ -65,7 +65,7 @@ const skills = [
   },
   {
     name: 'Material UI',
-    Icon: SiMaterialui,
+    Icon: SiMui,
   },
   {
     name: 'Bootstrap',
@@ -81,7 +81,7 @@ const skills = [
   },
   {
     name: 'Java',
-    Icon: SiJava,
+    Icon: FaJava,
   },
   {
     name: 'Python',

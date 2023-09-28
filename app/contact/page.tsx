@@ -86,7 +86,7 @@ export default function Page() {
           value={FullName}
           onChange={(e) => setFullName(e.target.value)}
           placeholder="Full name"
-          className="block w-96 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+          className="block w-80 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
           required
         />
 
@@ -96,7 +96,7 @@ export default function Page() {
           value={Email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email address"
-          className="peer block w-96 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+          className="peer block w-80 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
           // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           required
         />
@@ -110,7 +110,7 @@ export default function Page() {
           value={Subject}
           onChange={(e) => setSubject(e.target.value)}
           placeholder="Subject"
-          className="peer block w-96 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+          className="peer block w-80 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
           required
         />
 
@@ -120,12 +120,12 @@ export default function Page() {
           value={Message}
           onChange={(e) => setMessage(e.target.value)}
           rows={5}
-          className="block w-96 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+          className="block w-80 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
           placeholder="Message"
           required
         />
 
-        <div className="flex w-96 items-center justify-between">
+        <div className="flex w-80 items-center justify-between">
           <label
             htmlFor="checked-checkbox"
             className="mr-2 font-sarina text-lg font-medium text-gray-500 dark:text-gray-400"
@@ -136,7 +136,7 @@ export default function Page() {
             type="number"
             value={captcha}
             onChange={(e) => setCaptcha(e.target.valueAsNumber)}
-            className="block w-60 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
+            className="block w-44 rounded-md border-0 bg-gray-200 bg-opacity-50 px-4 py-3 text-gray-900 placeholder:font-medium focus:border-sky-500 focus:ring-sky-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
           />
         </div>
 
@@ -155,7 +155,7 @@ export default function Page() {
           </label>
         </div>
 
-        <button onClick={handleSubmit} className="w-96 rounded-md bg-sky-500 py-2 px-10 text-white">
+        <button onClick={handleSubmit} className="w-80 rounded-md bg-sky-500 py-2 px-10 text-white">
           Send
         </button>
       </div>
