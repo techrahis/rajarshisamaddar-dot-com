@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Rajarshi Samaddar',
   author: 'Rajarshi Samaddar',
   headerTitle: 'rajarshisamaddar',
-  description: 'Independent Software Developer at Freelancer',
+  description: 'Independent Full Stack Developer at www.rajarshisamaddar.com',
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://www.rajarshisamaddar.com',

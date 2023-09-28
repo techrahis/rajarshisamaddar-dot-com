@@ -6,7 +6,7 @@ import { ReactElement, useContext, useEffect, useRef } from 'react';
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
 import { ScrollContext } from './Providers/ScrollProvider';
 import { renderCanvas } from './renderCanvas';
-import { FiDownload } from 'react-icons/fi';
+import { FiDownload, FiExternalLink } from 'react-icons/fi';
 import { opacityVariant, popUp } from '@/components/FramerMotion/FramerMotionVariants';
 
 export default function Hero(): ReactElement {
@@ -60,13 +60,20 @@ export default function Hero(): ReactElement {
                   Computer Science. I can code in Python, Java, JavaScript, etc.
                 </motion.p>
               </div>
-              <motion.div variants={popUp}>
+              <motion.div variants={popUp} className="flex">
                 <Link
                   href="https://api.rajarshisamaddar.com/get-resume"
-                  className="flex max-w-xs select-none items-center justify-center gap-2 rounded-md border border-primary-500 px-5 py-2 outline-none transition-transform  active:scale-95"
+                  className="flex max-w-xs select-none items-center justify-center gap-2 rounded-l-md border border-primary-500 px-5 py-2 outline-none transition-transform  active:scale-95"
                 >
                   <FiDownload className="text-primary-500" />
                   <p className="font-medium text-primary-500 ">Resume</p>
+                </Link>
+                <Link
+                  href="/portfolio"
+                  className="flex max-w-xs select-none items-center justify-center gap-2 rounded-r-md border border-l-0 border-t-primary-500 border-r-primary-500 border-b-primary-500 px-5 py-2 outline-none transition-transform  active:scale-95"
+                >
+                  <FiExternalLink className="text-primary-500" />
+                  <p className="font-medium text-primary-500 ">Portfolio</p>
                 </Link>
               </motion.div>
             </div>

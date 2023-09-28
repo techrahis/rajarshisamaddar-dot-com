@@ -30,10 +30,19 @@ async function generate() {
                 <loc>https://www.rajarshisamaddar.com/blog/</loc>
             </url>
             <url>
-                <loc>https://www.rajarshisamaddar.com/projects/</loc>
+                <loc>https://www.rajarshisamaddar.com/portfolio/</loc>
+            </url>
+            <url>
+            <loc>https://www.rajarshisamaddar.com/contact/</loc>
             </url>
             <url>
                 <loc>https://www.rajarshisamaddar.com/utilities/</loc>
+            </url>
+            <url>
+            <loc>https://www.rajarshisamaddar.com/privacy-policy/</loc>
+            </url>
+            <url> 
+            <loc>https://www.rajarshisamaddar.com/dmca-policy/</loc>
             </url>
             ${pages
               .concat(contentPages)

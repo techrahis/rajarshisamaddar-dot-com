@@ -1,7 +1,12 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import Image from 'next/image';
-function OgImage({ src, alt }: { src: string; alt: string }) {
+function OgImage({ src, alt, handleOpen }: { src: string; alt: string; handleOpen: any }) {
   return (
-    <div className="relative -mt-[35%] w-full shrink-0 overflow-hidden rounded-xl shadow-2xl before:absolute before:inset-0 before:z-10 dark:before:bg-black/5 sm:-mt-0 sm:w-1/2 md:-ml-[35%] md:w-8/12">
+    <div
+      onClick={handleOpen}
+      onKeyDown={handleOpen}
+      className="relative -mt-[35%] w-full shrink-0 overflow-hidden rounded-xl shadow-2xl before:absolute before:inset-0 before:z-10 dark:before:bg-black/5 sm:-mt-0 sm:w-1/2 md:-ml-[35%] md:w-8/12"
+    >
       <Image
         title={alt}
         alt={alt}
@@ -10,7 +15,7 @@ function OgImage({ src, alt }: { src: string; alt: string }) {
         height={630}
         // placeholder="blur"
         blurDataURL={src}
-        quality={50}
+        quality={100}
         className="backdrop-blur-xl transition-all duration-300 lg:group-hover:scale-110"
         style={{
           width: '100%',

@@ -1,14 +1,45 @@
+'use client';
 import OgImage from './OgImage';
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
 import { MdOutlineLink } from 'react-icons/md';
 import { Project } from './types';
+import { Modal } from '@mui/material';
+import Image from 'next/image';
+import React from 'react';
 
 export default function ProjectItem({ data }: { data: Project }) {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <>
       <div className="mt-[30%] flex max-w-2xl flex-col items-center gap-8 rounded-lg bg-zinc-50 p-5 shadow-md transition-all dark:bg-zinc-800 sm:mt-8 sm:flex-row sm:p-10">
-        <OgImage src={data.src} alt={data.title} />
+        <OgImage src={data.src} alt={data.title} handleOpen={handleOpen} />
+
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Image
+            title={data.title}
+            alt={data.title}
+            src={`/static/images/project/${data.src}`}
+            width={1200}
+            height={630}
+            // placeholder="blur"
+            blurDataURL={data.src}
+            quality={100}
+            className="backdrop-blur-xl transition-all duration-300 lg:group-hover:scale-110"
+            // style={{
+            //   width: '100%',
+            //   height: 'auto',
+            //   objectFit: 'cover',
+            // }}
+          />
+        </Modal>
 
         <div className="flex flex-col justify-start gap-3">
           <h1 className="font-bold text-neutral-900 dark:text-neutral-200">{data.title}</h1>

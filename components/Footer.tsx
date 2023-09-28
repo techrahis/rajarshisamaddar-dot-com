@@ -28,24 +28,24 @@ export default function Footer() {
               <Link className="hover:text-black dark:hover:text-white" href="/about">
                 <ul>About</ul>
               </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/projects">
-                <ul>Projects</ul>
+              <Link className="hover:text-black dark:hover:text-white" href="/portfolio">
+                <ul>Portfolio</ul>
               </Link>
               <Link className="hover:text-black dark:hover:text-white" href="/certificates">
                 <ul>Certificates</ul>
               </Link>
             </div>
             <div className="flex flex-col gap-4 capitalize">
-              <Link className="hover:text-black dark:hover:text-white" href="/pages/contact">
+              <Link className="hover:text-black dark:hover:text-white" href="/contact">
                 <ul>Contact</ul>
               </Link>
               <Link className="hover:text-black dark:hover:text-white" href="/utilities">
                 <ul>Utilities</ul>
               </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/pages/dmca-policy">
+              <Link className="hover:text-black dark:hover:text-white" href="/dmca-policy">
                 <ul>DMCA Policy</ul>
               </Link>
-              <Link className="hover:text-black dark:hover:text-white" href="/pages/privacy-policy">
+              <Link className="hover:text-black dark:hover:text-white" href="/privacy-policy">
                 <ul>Privacy Policy</ul>
               </Link>
               <Link
