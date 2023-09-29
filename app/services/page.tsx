@@ -2,10 +2,10 @@
 import MainLayout from '@/layouts/MainLayout';
 import { InlineWidget } from 'react-calendly';
 
-export const metadata = {
-  title: 'Services - Rajarshi Samaddar',
-  description: 'My Services - Rajarshi Samaddar',
-};
+// export const metadata = {
+//   title: 'Services - Rajarshi Samaddar',
+//   description: 'My Services - Rajarshi Samaddar',
+// };
 
 export default function Page() {
   return (
