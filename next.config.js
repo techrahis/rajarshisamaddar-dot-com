@@ -13,7 +13,7 @@ const { withContentlayer } = require('next-contentlayer');
  **/
 module.exports = withPWA(
   withContentlayer({
-    reactStrictMode: true,
+    reactStrictMode: false,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
       dirs: ['app', 'components', 'lib', 'layouts', 'scripts'],

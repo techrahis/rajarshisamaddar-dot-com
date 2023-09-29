@@ -52,12 +52,13 @@ export default function Hero(): ReactElement {
                 >
                   Rajarshi Samaddar
                 </motion.h1>
-                <motion.p variants={opacityVariant} className="mt-2 text-lg font-extrabold">
+                <motion.p variants={opacityVariant} className="mt-2 text-xl font-extrabold">
                   Full-Stack Software Engineer
                 </motion.p>
-                <motion.p variants={opacityVariant} className="text-md mt-3 font-extrabold">
-                  I am currently building things for the web while pursuing my Bachelor Degree in
-                  Computer Science. I can code in Python, Java, JavaScript, etc.
+                <motion.p variants={opacityVariant} className="mt-3 text-lg font-extrabold">
+                  I create tailored web solutions, excel in product development, and code in
+                  multiple languages. My commitment is to deliver excellence, ensuring seamless user
+                  experiences for clients.
                 </motion.p>
               </div>
               <motion.div variants={popUp} className="flex">

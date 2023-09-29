@@ -41,7 +41,7 @@ export default function PostCard({ posts, showTags = true }: PostCardProps) {
                     ))}
                   </div>
                 )}
-                <div className="prose max-w-none text-gray-900 dark:text-gray-100">{summary}</div>
+                <div className="prose max-w-none dark:prose-dark">{summary}</div>
               </div>
             </article>
           </Link>

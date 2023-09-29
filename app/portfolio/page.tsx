@@ -13,7 +13,7 @@ export default function Page() {
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
           Portfolio
         </h1>
-        <p className="text-xl leading-7 text-gray-500 dark:text-gray-400">
+        <p className="prose max-w-none text-xl font-medium dark:prose-dark">
           As a indie developer, I'm dedicated to transforming ideas into digital reality. This
           portfolio is a glimpse into my journey, showcasing my diverse skills in web development,
           design, and problem-solving. With a commitment to innovation and a knack for elegant

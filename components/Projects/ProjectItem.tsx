@@ -2,7 +2,7 @@
 import OgImage from './OgImage';
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
-import { MdOutlineLink } from 'react-icons/md';
+import { HiExternalLink } from 'react-icons/hi';
 import { Project } from './types';
 import { Modal } from '@mui/material';
 import Image from 'next/image';
@@ -14,7 +14,7 @@ export default function ProjectItem({ data }: { data: Project }) {
   const handleClose = () => setOpen(false);
   return (
     <>
-      <div className="mt-[30%] flex max-w-2xl flex-col items-center gap-8 rounded-lg bg-zinc-50 p-5 shadow-md transition-all dark:bg-zinc-800 sm:mt-8 sm:flex-row sm:p-10">
+      <div className="mt-[30%] flex max-w-2xl flex-col items-center gap-8 rounded-lg bg-gray-200 bg-opacity-50 p-5 text-gray-900 transition-all dark:bg-gray-800 dark:text-gray-100 sm:mt-8 sm:flex-row sm:p-10">
         <OgImage src={data.src} alt={data.title} handleOpen={handleOpen} />
 
         <Modal
@@ -42,17 +42,15 @@ export default function ProjectItem({ data }: { data: Project }) {
         </Modal>
 
         <div className="flex flex-col justify-start gap-3">
-          <h1 className="font-bold text-neutral-900 dark:text-neutral-200">{data.title}</h1>
-          <p className="line-clamp-5 text-sm text-gray-400 dark:text-neutral-400">
-            {data.description}
-          </p>
+          <h1 className="prose max-w-none text-xl font-medium dark:prose-dark">{data.title}</h1>
+          <p className="prose max-w-none text-sm font-medium dark:prose-dark">{data.description}</p>
 
           <div className="flex flex-wrap items-center gap-1">
             {data.keywords.map((tool, key) => {
               return (
                 <span
                   key={key}
-                  className="rounded bg-zinc-200 px-2 py-1 text-xs text-gray-500 dark:bg-zinc-900"
+                  className="prose max-w-none rounded bg-gray-300 bg-opacity-50 px-2 py-1 text-xs font-medium dark:bg-gray-700 dark:prose-dark"
                 >
                   {tool}
                 </span>
@@ -79,7 +77,7 @@ export default function ProjectItem({ data }: { data: Project }) {
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-black dark:hover:text-white"
               >
-                <MdOutlineLink className="h-6 w-6 transition-all hover:scale-110 active:scale-90" />
+                <HiExternalLink className="h-6 w-6 transition-all hover:scale-110 active:scale-90" />
               </Link>
             )}
           </div>

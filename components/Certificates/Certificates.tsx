@@ -8,11 +8,11 @@ import { popUpFromBottomForText } from '../FramerMotion/FramerMotionVariants';
 
 function Certificates() {
   return (
-    <div className="flex flex-col gap-3 pt-10">
+    <div className="flex flex-col gap-3 pt-5">
       {certificates.map((cer) => {
         return (
           <AnimatedDiv
-            className="flex flex-col gap-2 rounded-lg bg-white p-3 shadow dark:bg-zinc-800 md:flex-row md:items-center md:justify-between md:gap-4"
+            className="flex flex-col gap-2 rounded-lg bg-gray-200 bg-opacity-50 p-3 text-gray-900 dark:bg-gray-800 dark:text-gray-100 md:flex-row md:items-center md:justify-between md:gap-4"
             variants={popUpFromBottomForText}
             key={cer.id}
           >
@@ -35,16 +35,15 @@ function Certificates() {
                 <Link
                   href={cer.url}
                   target="_blank"
-                  className="text-xl font-bold leading-8 tracking-tight text-primary-500 duration-300 hover:text-primary-400"
+                  className="animate- font-medium text-gray-900 dark:text-gray-100 md:text-lg"
                 >
                   {cer.title}
                 </Link>
-                <p className="text-sm text-gray-900 dark:text-gray-100">
+                <p className="prose max-w-none text-sm font-medium dark:prose-dark">
                   {cer.orgName} &#x2022; {cer.issuedDate}
                 </p>
               </div>
             </div>
-            <p className="text-sm text-gray-500"></p>
           </AnimatedDiv>
         );
       })}

@@ -13,7 +13,7 @@ export default function Page() {
         <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
           Certificates
         </h1>
-        <p className="text-xl font-medium leading-7 text-gray-500 dark:text-gray-400">
+        <p className="prose max-w-none text-xl font-medium dark:prose-dark">
           I've participated in many contests, courses and tests and got certified in many skills.
           You can find the certificates below.
         </p>
