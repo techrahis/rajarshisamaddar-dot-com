@@ -14,8 +14,11 @@ export default function Page() {
           Portfolio
         </h1>
         <p className="text-xl leading-7 text-gray-500 dark:text-gray-400">
-          I've been making various types of projects some of them were basics and some of them were
-          complicated. So far I've made <b>14+</b> projects.
+          As a indie developer, I'm dedicated to transforming ideas into digital reality. This
+          portfolio is a glimpse into my journey, showcasing my diverse skills in web development,
+          design, and problem-solving. With a commitment to innovation and a knack for elegant
+          solutions, I've collaborated on a range of projects. Explore my portfolio to see how I can
+          bring your digital vision to life.
         </p>
       </div>
 
